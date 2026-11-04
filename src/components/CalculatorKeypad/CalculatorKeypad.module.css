@@ -1,0 +1,101 @@
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.key {
+  display: grid;
+  min-width: 0;
+  min-height: 56px;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 7%);
+  border-radius: 15px;
+  color: var(--text);
+  background: var(--surface-raised);
+  box-shadow:
+    6px 7px 12px rgb(0 0 0 / 35%),
+    -3px -3px 8px rgb(255 255 255 / 6%),
+    inset 1px 1px 1px rgb(255 255 255 / 7%);
+  cursor: pointer;
+  font: 500 1.05rem var(--mono);
+  transition: background 150ms ease, color 150ms ease, box-shadow 150ms ease;
+}
+
+.key:hover {
+  background: #293640;
+  box-shadow:
+    4px 5px 9px rgb(0 0 0 / 31%),
+    -2px -2px 6px rgb(255 255 255 / 7%),
+    inset 1px 1px 2px rgb(255 255 255 / 8%);
+}
+
+.key:active {
+  box-shadow: inset 3px 3px 6px rgb(0 0 0 / 22%), inset -2px -2px 5px rgb(255 255 255 / 2%);
+}
+
+.utility {
+  color: #a9bac2;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.91rem;
+}
+
+.clear {
+  border-color: rgb(255 151 126 / 28%);
+  color: #ffad98;
+  background: linear-gradient(145deg, #553c3a, #3e3032);
+}
+
+.clear:hover {
+  background: linear-gradient(145deg, #674542, #4a3537);
+}
+
+.operator {
+  color: #a5e5d7;
+  background: linear-gradient(145deg, #3a5159, #2a3d45);
+}
+
+.equals {
+  position: relative;
+  border: 1px solid #b6ffeb;
+  color: #102922;
+  background: linear-gradient(145deg, #b2ffe8, #72dfc4);
+  box-shadow:
+    0 0 0 3px rgb(139 232 210 / 11%),
+    6px 7px 13px rgb(0 0 0 / 35%),
+    -2px -2px 5px rgb(255 255 255 / 12%),
+    inset 1px 1px 2px rgb(255 255 255 / 65%),
+    inset -2px -3px 4px rgb(20 98 77 / 18%);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.equals:hover {
+  color: #102922;
+  background: linear-gradient(145deg, #c8fff0, #8df0d6);
+  box-shadow:
+    0 0 0 4px rgb(139 232 210 / 16%),
+    6px 7px 13px rgb(0 0 0 / 35%),
+    inset 1px 1px 2px rgb(255 255 255 / 70%);
+}
+
+.equals:active {
+  box-shadow:
+    0 0 0 2px rgb(139 232 210 / 12%),
+    inset 4px 4px 8px rgb(20 98 77 / 25%);
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+  .keypad {
+    gap: 8px;
+  }
+
+  .key {
+    min-height: clamp(48px, 13vw, 58px);
+    border-radius: 13px;
+  }
+}

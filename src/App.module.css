@@ -1,0 +1,244 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 28px 24px 18px;
+  background:
+    radial-gradient(ellipse at 50% 46%, rgb(48 69 77 / 35%), transparent 50%),
+    var(--page);
+}
+
+.main {
+  display: grid;
+  flex: 1;
+  align-content: center;
+  justify-items: center;
+  padding: 12px 0 18px;
+}
+
+.calculator {
+  display: grid;
+  width: min(100%, 470px);
+  gap: 16px;
+  padding: 17px;
+  border: 1px solid #34434c;
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, #2c3941 0%, #232f37 46%, #1d2931 100%);
+  box-shadow:
+    18px 22px 40px rgb(0 0 0 / 46%),
+    -9px -9px 24px rgb(121 145 153 / 12%),
+    inset 2px 2px 2px rgb(255 255 255 / 8%),
+    inset -3px -4px 8px rgb(0 0 0 / 26%);
+}
+
+.deviceHeader {
+  display: flex;
+  min-height: 45px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2px 1px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #eff5f3;
+  font-size: 1.24rem;
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  text-decoration: none;
+}
+
+.brandMark {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  border: 1px solid rgb(139 232 210 / 25%);
+  border-radius: 12px;
+  color: var(--accent);
+  background: linear-gradient(145deg, #35464d, #26353c);
+  box-shadow:
+    4px 5px 8px rgb(0 0 0 / 33%),
+    -2px -2px 5px rgb(255 255 255 / 7%),
+    inset 1px 1px 2px rgb(255 255 255 / 9%);
+  font-size: 0.94rem;
+}
+
+.brandThree {
+  margin-left: 1px;
+  color: var(--accent);
+  font-size: 0.78em;
+  vertical-align: 0.2em;
+}
+
+.brandX {
+  margin-left: 1px;
+  color: #c3a9ff;
+}
+
+.historyTrigger {
+  display: inline-flex;
+  min-height: 39px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 12px;
+  color: #c4d0d4;
+  background: linear-gradient(145deg, #34424a, #26343c);
+  box-shadow:
+    4px 5px 9px rgb(0 0 0 / 28%),
+    -2px -2px 6px rgb(255 255 255 / 5%),
+    inset 1px 1px 1px rgb(255 255 255 / 7%);
+  cursor: pointer;
+  font-size: 0.78rem;
+  transition: color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.historyTrigger:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.historyTrigger:active {
+  box-shadow: inset 3px 3px 6px rgb(0 0 0 / 27%);
+  transform: translateY(1px);
+}
+
+.historyTrigger svg {
+  font-size: 0.92rem;
+}
+
+.historyCount {
+  display: grid;
+  min-width: 18px;
+  height: 18px;
+  place-items: center;
+  padding: 0 4px;
+  border-radius: 6px;
+  color: var(--accent);
+  background: rgb(139 232 210 / 12%);
+  font: 500 0.63rem var(--mono);
+}
+
+.standardWrap,
+.percentageWrap {
+  display: grid;
+  min-width: 0;
+  gap: 13px;
+}
+
+.keyboardHint {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  padding-top: 1px;
+  color: #8d9ca3;
+  font-size: 0.65rem;
+}
+
+.keyboardHint span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.keyboardHint kbd {
+  padding: 2px 4px;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 4px;
+  color: #b7c4c9;
+  background: #202c33;
+  font: 500 0.61rem var(--mono);
+}
+
+.footerNote {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 0;
+  color: #8a9aa0;
+  font-size: 0.71rem;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  box-shadow: 0 0 9px rgb(85 197 174 / 45%);
+}
+
+.companyFooter {
+  display: flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #71818a;
+  font-size: 0.69rem;
+}
+
+.companyFooter a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.companyFooter a:first-child {
+  color: #a7b6bb;
+  font-weight: 600;
+}
+
+.companyFooter a:hover {
+  color: var(--accent);
+}
+
+.companyFooter sup {
+  margin-left: 1px;
+  font-size: 0.62em;
+}
+
+.notice {
+  position: fixed;
+  z-index: 30;
+  right: 24px;
+  bottom: 24px;
+  padding: 12px 16px;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 12px;
+  color: var(--text);
+  background: #35464e;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 38%);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 14px 14px max(10px, env(safe-area-inset-bottom));
+  }
+
+  .calculator {
+    gap: 13px;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .brand {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .keyboardHint {
+    gap: 7px;
+    font-size: 0.58rem;
+  }
+
+  .companyFooter {
+    font-size: 0.63rem;
+  }
+}
